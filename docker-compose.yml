@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  loan-calculator-mysql:
+    image: mysql:8.0.26
+    container_name: loan-calculator-mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=loan-calulator
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d/
+      - ./conf:/etc/mysql/conf.d
