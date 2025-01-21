@@ -39,7 +39,7 @@ spring:
 
   datasource:
     url: jdbc:mysql://${MYSQL_DB_HOST:127.0.0.1}:${MYSQL_DB_PORT:3306}/${MYSQL_DB_NAME:loan-calculator}
-    name: {MYSQL_DB_NAME:loan-calculator}
+    name: ${MYSQL_DB_NAME:loan-calculator}
     username: ${MYSQL_USERNAME:root}
     password: ${MYSQL_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
